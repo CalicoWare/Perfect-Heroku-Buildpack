@@ -128,7 +128,7 @@ EOF
     say Ok
     step Extracting dependencies
     untar swift-2.2-RELEASE-ubuntu14.04.tar
-    mv $CACHE_DIR/swift-2.2-RELEASE-ubuntu14.04 $CACHE_DIR/.delta || fail Renaming Swift dir
+    rsync -a $CACHE_DIR/swift-2.2-RELEASE-ubuntu14.04 $CACHE_DIR/.delta || fail Renaming Swift dir
     untar cedar14-clang.tar
     untar cedar14-libicu-dev.tar
     untar cedar14-libmongoc.tar
